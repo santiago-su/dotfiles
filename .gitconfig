@@ -1,0 +1,14 @@
+[user]
+  name = "" 
+  email = ""
+	
+[alias]
+  co = checkout
+  ff = merge --ff-only
+  h    = log --pretty=format:'%Creset%C(red bold)[%ad] %C(blue bold)%h %Creset%C(magenta bold)%d %Creset%s %C(green bold)(%an)%Creset' --graph --abbrev-commit --date=short
+  ha   = log --pretty=format:'%Creset%C(red bold)[%ad] %C(blue bold)%h %Creset%C(magenta bold)%d %Creset%s %C(green bold)(%an)%Creset' --graph --all --abbrev-commit --date=short
+
+[core]
+	excludesfile = ~/.gitignore
+[credential]
+	helper = osxkeychain
