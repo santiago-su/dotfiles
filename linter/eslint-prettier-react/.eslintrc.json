@@ -16,33 +16,26 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": ["error", { "singleQuote": true, "printWidth": 80 }],
     "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "no-shadow": [
+      2,
+      {
+        "hoist": "all",
+        "allow": [
+          "resolve",
+          "reject",
+          "done",
+          "next",
+          "err",
+          "error"
+        ]
+      }
+    ]
   },
-  "prettier/prettier": [
-    "error",
-    {
-      "singleQuote": true,
-      "printWidth": 80
-    }
-  ],
-  "no-shadow": [
-    2,
-    {
-      "hoist": "all",
-      "allow": [
-        "resolve",
-        "reject",
-        "done",
-        "next",
-        "err",
-        "error"
-      ]
-    }
-  ],
   "plugins": [
     "react",
     "prettier",
